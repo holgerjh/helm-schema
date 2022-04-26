@@ -1,0 +1,7 @@
+name: "schema"
+version: "0.1.0"
+usage: "Generates a JSON schema from a chart"
+description: "Generates a JSON schema from a chart"
+command: "$HELM_PLUGIN_DIR/command-linux.sh"
+hooks:
+  install: "cd $HELM_PLUGIN_DIR && ./install.sh"
