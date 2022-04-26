@@ -10,7 +10,10 @@ show_hint() {
 }
 
 $HELM_PLUGIN_DIR/genjsonschema-cli "$@" 
+errorcode="$?"
 
 if [ ! "$@" ] ; then
   show_hint
 fi
+
+exit $errorcode
