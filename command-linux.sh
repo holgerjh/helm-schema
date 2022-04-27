@@ -12,7 +12,7 @@ show_hint() {
 $HELM_PLUGIN_DIR/genjsonschema-cli "$@" 
 errorcode="$?"
 
-if [ ! "$@" ] ; then
+if [ "$#" -eq 0 ] ; then
   show_hint
 fi
 
