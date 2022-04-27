@@ -4,7 +4,7 @@ This is a plugin for helm that adds the `helm schema` command.
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/SHK3tI9X7OwZ4tW4M9ZDYcRz4.png)](https://asciinema.org/a/SHK3tI9X7OwZ4tW4M9ZDYcRz4)
+![demo](https://github.com/holgerjh/helm-schema/blob/main/demo.svg?raw=true)
 
 ## Installation
 
