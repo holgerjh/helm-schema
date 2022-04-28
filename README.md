@@ -18,15 +18,29 @@ This is a plugin for helm that adds the `helm schema` command.
 
 The syntax to create a JSON Schema from files FILE-1 ... FILE-N is:
 
-`helm create FILE-1 [-f FILE-2] [-f ...] [-f FILE-N] [-o OUTPUT-FILE]`.
+`helm schema create FILE-1 [-f FILE-2] [-f ...] [-f FILE-N] [-o OUTPUT-FILE]`.
 
 To create a schema from a chart with a single values.yaml: 
 
-`helm create values.yaml -o values.schema.json`
+`helm schema create values.yaml -o values.schema.json`
 
 To create a schema from a chart with multiple yaml files: 
 
-`helm create values.yaml -f my-other-values.yaml -o values.schema.json`
+`helm schema create values.yaml -f my-other-values.yaml -o values.schema.json`
+
+#### Options
+
+The following options are available:
+
+| Option                  | Description                                |
+| ----------------------- | ------------------------------------------ |
+| `-a`, `--allow-additional`  | Generates a schema that allows unknown object properties that were not encountered during schema generation. Useful for generating a schema from an incomplete `values.yaml`. Default: false |
+| `-f`, `--file stringArray`  | Additional file that will be merged into main file before creating the schema. Can be specified mulitple times. |
+| `-h`, `--help`              | help for create |
+| `-d`, `--id string`         | Fill the schema $id field. |
+| `-m`, `--merge-only`        | Do not generate a schema. Instead, output the YAML result of the merge operation. Default: false |
+| `-o`, `--output string`     | Output file. Default is STDOUT. |
+| `-r`, `--require-all`       | Generates a strict schema that requires all keys to be present. Default: false |
 
 ### Schema Verification
 
