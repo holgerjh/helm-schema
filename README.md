@@ -53,3 +53,6 @@ Currently only linux is supported.
 ## Uninstall
 
 Run `helm plugin uninstall schema`.
+
+
+<sub>No koalas 🐨 were hurt in the making of this plugin.</sub>
